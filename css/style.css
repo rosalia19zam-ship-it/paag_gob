@@ -492,6 +492,10 @@ button {
      color: #fff;
      font-weight: bold;
 }
+.yellow2 {
+     color:  #f4c25d;
+     font-weight: bold;
+}
 
 .read_more {
      font-size: 17px;
@@ -530,7 +534,7 @@ button {
 
 .food .food_box {
      text-align: center;
-     background: #5a2f27;
+     background:#1e3a8a;
      margin-bottom: 30px;
      margin-top: 116px;
      padding: 0px 30px 30px 30px;
