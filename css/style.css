@@ -493,7 +493,7 @@ button {
      font-weight: bold;
 }
 .yellow2 {
-     color:  #f4c25d;
+     color:  #1e3a8a;
      font-weight: bold;
 }
 
@@ -628,11 +628,11 @@ button {
 }
 
 #white_bg:hover.works_box p {
-     color: #000;
+     color: #1e3a8a;
 }
 
 #white_bg:hover.works_box h4 {
-     background: #190707;
+     background:  #eda911;
 }
 
 
