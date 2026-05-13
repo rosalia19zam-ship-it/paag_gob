@@ -1414,13 +1414,11 @@ button {
 
 /* Ajuste específico para móvil */
 @media (max-width: 767px) {
-<<<<<<< HEAD
      .btn-solicitar {
           width: 90%;
           /* En móvil, que el botón sea casi de todo el ancho */
           margin: 0 auto;
      }
-=======
     .btn-solicitar {
         width: 90%; /* En móvil, que el botón sea casi de todo el ancho */
         margin: 0 auto;
@@ -1472,5 +1470,4 @@ button {
     margin-bottom: 10px;
     line-height: 1.6;
     color: #333;
->>>>>>> 403b0b6534b2cd0724ddefe7687a9115a3837676
 }
