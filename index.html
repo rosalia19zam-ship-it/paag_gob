@@ -82,41 +82,31 @@
    </header>
    <!-- end header inner -->
    <!-- end header -->
+
    <!-- banner -->
-   <section class="banner_main">
-      <div class="container">
+   <section class="banner_main mobile-bg-hero">
+      <div class="container-fluid">
          <div class="row d_flex">
-            <div class="col-md-6">
+
+            <!-- TEXTO -->
+            <div class="col-md-5 offset-md-1">
                <div class="text-bg">
-                  <h1>Te prestamos hasta $50,000</h1>
-                  <p>There are many variations of passages of Lorem Ipsum available, but the majorityomised words which
-                     don't look even slightly believable</p>
-                  <a class="read_more" href="#">Read More</a>
+                  <h1>Te prestamos hasta <br><span>$50,000</span></h1>
+                  <p>Obtén el financiamiento que necesitas hoy mismo con un proceso 100% digital y transparente.</p>
+                  <!-- En móvil ocultaremos este botón si el simulador ya tiene uno -->
+
                </div>
             </div>
 
-            <div class="col-md-6">
-               <form id="request" class="main_form">
-                  <div class="row">
-                     <div class="col-md-12 ">
-                        <input class="contactus" placeholder="Nombre" type="type" name="Name">
-                     </div>
-                     <div class="col-md-12">
-                        <input class="contactus" placeholder=" Correo" type="type" name="Email">
-                     </div>
-                     <div class="col-md-12">
-                        <input class="contactus" placeholder=" Número de Teléfono" type="type" name="Phone Number">
-                     </div>
-                     <div class="col-md-12">
-                        <textarea class="contactus" placeholder="Mensaje" type="type" Message="Name">Mensaje </textarea>
-                     </div>
-                     <div class="col-sm-12">
-                        <button class="send_btn">Enviar</button>
-                     </div>
-                  </div>
-               </form>
+            <!-- IMAGEN (Se ocultará en móvil porque será el fondo) -->
+            <div class="col-md-6 d-none d-md-block">
+               <div class="hero_img_box_extra_large">
+                  <img src="images/a7afb916-8b72-43b1-8122-de5ada911007.png" alt="Imagen Grande">
+               </div>
             </div>
+
          </div>
+      </div>
    </section>
    <header class="hero-section">
       <div class="simu-container-extended">
@@ -161,9 +151,8 @@
                   </div>
                </div>
             </div>
-
-            <!-- COLUMNA 3: BOTÓN -->
-            <div class="button-column">
+            <!-- COLUMNA 3: BOTÓN CENTRADO -->
+            <div class="col-md-12 text-center button-column">
                <button class="btn-solicitar">¡Solicítalo Ahora!</button>
             </div>
 

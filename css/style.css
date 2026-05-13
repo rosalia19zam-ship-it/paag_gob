@@ -328,6 +328,7 @@ button {
 .banner_main {
      background: #247D7F;
      padding: 20px 0px 90px 0px;
+
 }
 
 .text-bg {
@@ -765,24 +766,40 @@ button {
      /* Color del fondo superior en la imagen */
 }
 
+/* Forzar que las secciones no se traslapen */
 .hero-section {
-     background-color: var(--bg-dark-green);
-     height: 200px;
-     /* Altura del encabezado oscuro */
-     position: relative;
      width: 100%;
+     float: left;
+     /* Ayuda a que Bootstrap reconozca el bloque */
+     padding-bottom: 50px;
+     background: #fff;
+     position: relative;
+     clear: both;
+     /* Limpia cualquier flotado de la imagen de arriba */
 }
 
+/* El contenedor blanco del simulador */
 .simu-container-extended {
-     position: absolute;
-     top: 80px;
-     /* Lo baja para que quede mitad afuera/mitad adentro */
-     left: 5%;
-     right: 5%;
-     background: white;
-     border-radius: 12px;
-     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+     width: 90%;
+     max-width: 1100px;
+     margin: 0 auto;
+     background: #fff;
+     border-radius: 20px;
      padding: 40px;
+     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+     position: relative;
+     z-index: 5;
+     /* Eliminamos cualquier height fijo que pueda tener */
+     height: auto !important;
+     overflow: hidden;
+}
+
+.food {
+     clear: both;
+     padding-top: 60px;
+     position: relative;
+     display: block;
+     width: 100%;
 }
 
 .simu-content {
@@ -958,4 +975,392 @@ button {
      width: 100%;
      box-shadow: 0 4px 14px rgba(245, 158, 11, 0.4);
      cursor: pointer;
+}
+
+/* Sección principal con el fondo de la imagen */
+.banner_main {
+     background-color: #2d7a77;
+     padding: 100px 0;
+     /* Aumentamos el padding para que la sección sea más alta */
+     overflow: hidden;
+}
+
+/* Contenedor de la imagen para que se vea en grande */
+.hero_img_box_large {
+     width: 100%;
+     display: flex;
+     justify-content: flex-start;
+     /* Alineada hacia el centro/izquierda de su columna */
+     padding-right: 50px;
+}
+
+.hero_img_box_large img {
+     width: 100%;
+     /* Ocupa todo el ancho de la columna */
+     max-width: 800px;
+     /* Pero le ponemos un tope para que no se pixele */
+
+     border-radius: 15px;
+     /* Bordes redondeados como en la referencia */
+     box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+     /* Sombra más fuerte para impacto */
+     transition: transform 0.3s ease;
+}
+
+/* Ajuste del texto para que no se pierda ante la imagen grande */
+.text-bg h1 {
+     font-size: 70px;
+     /* Texto más grande */
+     line-height: 80px;
+     color: #fff;
+     margin-bottom: 20px;
+}
+
+.text-bg p {
+     font-size: 20px;
+     max-width: 450px;
+}
+
+/* Ajuste de la sección para dar más altura */
+.banner_main {
+     background-color: #2d7a77;
+     padding: 60px 0;
+     /* Padding vertical moderado */
+     min-height: 700px;
+     display: flex;
+     align-items: center;
+     overflow: hidden;
+}
+
+/* Contenedor de la imagen a escala máxima */
+.hero_img_box_extra_large {
+     width: 100%;
+     display: flex;
+     justify-content: center;
+}
+
+.hero_img_box_extra_large img {
+     width: 110%;
+     /* Forzamos a que sea ligeramente más grande que su contenedor */
+     max-width: 900px;
+     /* Tamaño máximo muy amplio */
+     height: auto;
+     border-radius: 20px;
+     box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
+     /* Sombra muy profunda */
+     transform: scale(1.05);
+     /* Pequeño aumento de escala extra */
+     z-index: 10;
+}
+
+/* Ajuste del texto para que mantenga su fuerza */
+.text-bg h1 {
+     font-size: 65px;
+     font-weight: 800;
+     color: #fff;
+     line-height: 1.1;
+}
+
+.text-bg p {
+     font-size: 22px;
+     color: rgba(255, 255, 255, 0.9);
+     margin: 25px 0;
+}
+
+/* Responsividad para tablets y móviles */
+@media (max-width: 991px) {
+     .hero_img_box_extra_large img {
+          width: 100%;
+          transform: scale(1);
+     }
+}
+
+/* --- ARREGLO PARA RESPONSIVE (Móviles y Tablets) --- */
+
+@media (max-width: 991px) {
+
+     /* Ajustamos el banner para que no sea tan alto en móviles */
+     .banner_main {
+          padding: 40px 0;
+          min-height: auto;
+          height: auto;
+     }
+
+     /* Quitamos el desplazamiento lateral del texto */
+     .offset-md-1 {
+          margin-left: 0 !important;
+     }
+
+     /* Centramos el texto en móviles */
+     .text-bg {
+          text-align: center;
+          padding-bottom: 30px;
+     }
+
+     .text-bg h1 {
+          font-size: 35px !important;
+          /* Texto más pequeño para que quepa en la pantalla */
+          line-height: 40px !important;
+     }
+
+     .text-bg p {
+          font-size: 16px;
+          margin: 15px auto;
+     }
+
+     /* Ajustamos la imagen para que no se salga de la pantalla */
+     .hero_img_box_extra_large {
+          padding-right: 0;
+          justify-content: center;
+     }
+
+     .hero_img_box_extra_large img {
+          width: 100% !important;
+          /* Ocupa el ancho disponible */
+          max-width: 100%;
+          transform: scale(1);
+          /* Quitamos el aumento de tamaño */
+          margin-top: 20px;
+     }
+
+     /* Ajuste para el simulador de préstamos (Pills) */
+     .simu-content {
+          flex-direction: column;
+          /* Ponemos los controles uno debajo del otro */
+          padding: 20px;
+     }
+
+     .slider-column {
+          width: 100%;
+          margin-bottom: 20px;
+     }
+
+     .main-controls {
+          justify-content: space-around;
+     }
+}
+
+/* Ajustes para pantallas muy pequeñas (iPhone/Android pequeños) */
+@media (max-width: 575px) {
+     .text-bg h1 {
+          font-size: 28px !important;
+     }
+
+     .btn-circle {
+          width: 40px;
+          height: 40px;
+     }
+
+     .amount-pill {
+          width: 120px;
+          font-size: 18px;
+     }
+}
+
+/* --- AJUSTES PARA DISPOSITIVOS MÓVILES (Celulares) --- */
+@media (max-width: 767px) {
+
+     /* 1. Ajuste del Banner Principal */
+     .banner_main {
+          padding: 40px 0 !important;
+          height: auto !important;
+          min-height: auto !important;
+     }
+
+     /* 2. Tamaño de Texto para Celular */
+     .text-bg {
+          text-align: center;
+          /* Centramos el texto en móviles */
+          margin-bottom: 30px;
+     }
+
+     .text-bg h1 {
+          font-size: 32px !important;
+          /* Reducimos el título para que no se corte */
+          line-height: 38px !important;
+     }
+
+     .text-bg h1 span {
+          font-size: 38px !important;
+     }
+
+     .text-bg p {
+          font-size: 16px !important;
+          padding: 0 10px;
+     }
+
+     /* 3. Ajuste de la Imagen Gigante */
+     .hero_img_box_extra_large {
+          width: 100%;
+          margin: 0 auto;
+          padding: 0;
+          display: flex;
+          justify-content: center;
+     }
+
+     .hero_img_box_extra_large img {
+          width: 100% !important;
+          /* La imagen se ajusta al ancho del celular */
+          max-width: 400px;
+          /* Evitamos que sea demasiado grande en móvil */
+          transform: scale(1);
+          /* Quitamos el aumento de escala para que no se encime */
+          margin-bottom: 0;
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+     }
+
+     /* 4. Evitar que las secciones se encimen */
+     .hero-section,
+     .food,
+     .works {
+          padding: 50px 0 !important;
+          margin-top: 0 !important;
+          clear: both;
+          /* Forzamos a que bajen después del banner */
+     }
+
+     /* 5. Ajuste del Simulador de Préstamos */
+     .simu-content {
+          flex-direction: column !important;
+          /* Ponemos los sliders uno abajo de otro */
+          padding: 20px !important;
+     }
+
+     .slider-column {
+          width: 100% !important;
+          margin-bottom: 25px;
+     }
+
+     .amount-pill {
+          width: 100% !important;
+          max-width: 200px;
+          margin: 10px auto;
+     }
+}
+
+/* --- AJUSTE PARA TABLETS (Opcional) --- */
+@media (min-width: 768px) and (max-width: 991px) {
+     .text-bg h1 {
+          font-size: 45px !important;
+     }
+
+     .hero_img_box_extra_large img {
+          width: 90%;
+          transform: scale(1);
+     }
+}
+
+@media (max-width: 767px) {
+
+     /* Hacemos que el banner use la imagen como fondo */
+     .mobile-bg-hero {
+          background: linear-gradient(rgba(45, 122, 119, 0.85), rgba(45, 122, 119, 0.85)),
+               url('../images/a7afb916-8b72-43b1-8122-de5ada911007.png');
+          background-size: cover;
+          background-position: center;
+          padding: 60px 20px !important;
+          text-align: left;
+          /* Alineado a la izquierda como la imagen 1e7c15.jpg */
+     }
+
+     .text-bg h1 {
+          font-size: 38px !important;
+          line-height: 44px !important;
+          color: #ffffff !important;
+          text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
+     }
+
+     /* Estilo de la "Tarjeta Blanca" para el simulador */
+     .hero-section {
+          margin-top: -50px;
+          /* Hace que suba y traslape con el banner */
+          padding: 0 15px;
+          background: transparent;
+     }
+
+     .simu-container-extended {
+          background: #ffffff;
+          border-radius: 20px;
+          padding: 30px 20px;
+          box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+          border: 1px solid #eee;
+     }
+
+     /* Ajuste de los controles del simulador dentro de la tarjeta */
+     .slider-column {
+          margin-bottom: 30px;
+     }
+
+     .slider-title {
+          font-size: 18px;
+          color: #2d3a4b;
+          font-weight: bold;
+          margin-bottom: 15px;
+     }
+
+     .main-controls {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+     }
+
+     /* Botón amarillo/naranja como la referencia */
+     .btn-solicitar {
+          background: #f4c25d !important;
+          /* El color de image_1e7c15.jpg */
+          color: #2d3a4b !important;
+          font-weight: bold;
+          border-radius: 10px;
+          width: 100%;
+          padding: 15px;
+          font-size: 20px;
+          border: none;
+          box-shadow: 0 4px 15px rgba(244, 194, 93, 0.4);
+     }
+}
+
+/* Contenedor del botón */
+.button-column {
+     display: flex;
+     justify-content: center;
+     /* Centra horizontalmente */
+     align-items: center;
+     /* Centra verticalmente */
+     width: 100%;
+     margin-top: 30px;
+     /* Espacio respecto a los sliders de arriba */
+     padding-bottom: 20px;
+}
+
+/* Estilo del botón (basado en la referencia amarilla) */
+.btn-solicitar {
+     background: #f4c25d !important;
+     /* Color amarillo/dorado */
+     color: #2d3a4b !important;
+     font-weight: bold;
+     font-size: 20px;
+     padding: 15px 40px;
+     /* Más ancho para que luzca mejor */
+     border-radius: 10px;
+     border: none;
+     cursor: pointer;
+     transition: all 0.3s ease;
+     box-shadow: 0 4px 15px rgba(244, 194, 93, 0.4);
+     display: inline-block;
+     /* Importante para que el centrado funcione */
+}
+
+.btn-solicitar:hover {
+     transform: translateY(-3px);
+     /* Efecto de elevación al pasar el mouse */
+     box-shadow: 0 6px 20px rgba(244, 194, 93, 0.6);
+}
+
+/* Ajuste específico para móvil */
+@media (max-width: 767px) {
+     .btn-solicitar {
+          width: 90%;
+          /* En móvil, que el botón sea casi de todo el ancho */
+          margin: 0 auto;
+     }
 }
