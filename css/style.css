@@ -224,7 +224,7 @@ button {
 }
 
 .theme_bg {
-     background: #38c8a8;
+     background: #f59e0b;
 }
 
 .margin_top_30 {
@@ -276,7 +276,7 @@ button {
 
 .navigation.navbar-dark .navbar-nav .nav-link {
      padding: 0 25px;
-     color: #000;
+     color: #fff;
      font-size: 16px;
      line-height: 20px;
      font-weight: 500;
@@ -310,7 +310,7 @@ button {
 
 .header {
      width: 100%;
-     background: #fff;
+     background: #f4c25d;
      padding: 20px 30px;
 }
 
@@ -1023,7 +1023,7 @@ button {
 
 /* Ajuste de la sección para dar más altura */
 .banner_main {
-     background-color: #2d7a77;
+     background-color: #003366;
      padding: 60px 0;
      /* Padding vertical moderado */
      min-height: 700px;
@@ -1254,7 +1254,7 @@ button {
 
      /* Hacemos que el banner use la imagen como fondo */
      .mobile-bg-hero {
-          background: linear-gradient(rgba(45, 122, 119, 0.85), rgba(45, 122, 119, 0.85)),
+          background: linear-gradient(rgba(0, 51, 102), rgba(0, 51, 102, 0.85)),
                url('../images/a7afb916-8b72-43b1-8122-de5ada911007.png');
           background-size: cover;
           background-position: center;
@@ -1318,49 +1318,40 @@ button {
           box-shadow: 0 4px 15px rgba(244, 194, 93, 0.4);
      }
 }
-
 /* Contenedor del botón */
 .button-column {
-     display: flex;
-     justify-content: center;
-     /* Centra horizontalmente */
-     align-items: center;
-     /* Centra verticalmente */
-     width: 100%;
-     margin-top: 30px;
-     /* Espacio respecto a los sliders de arriba */
-     padding-bottom: 20px;
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center;     /* Centra verticalmente */
+    width: 100%;
+    margin-top: 30px;        /* Espacio respecto a los sliders de arriba */
+    padding-bottom: 20px;
 }
 
 /* Estilo del botón (basado en la referencia amarilla) */
 .btn-solicitar {
-     background: #f4c25d !important;
-     /* Color amarillo/dorado */
-     color: #2d3a4b !important;
-     font-weight: bold;
-     font-size: 20px;
-     padding: 15px 40px;
-     /* Más ancho para que luzca mejor */
-     border-radius: 10px;
-     border: none;
-     cursor: pointer;
-     transition: all 0.3s ease;
-     box-shadow: 0 4px 15px rgba(244, 194, 93, 0.4);
-     display: inline-block;
-     /* Importante para que el centrado funcione */
+    background: #f4c25d !important; /* Color amarillo/dorado */
+    color: #2d3a4b !important;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 15px 40px;      /* Más ancho para que luzca mejor */
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(244, 194, 93, 0.4);
+    display: inline-block;   /* Importante para que el centrado funcione */
 }
 
 .btn-solicitar:hover {
-     transform: translateY(-3px);
-     /* Efecto de elevación al pasar el mouse */
-     box-shadow: 0 6px 20px rgba(244, 194, 93, 0.6);
+    transform: translateY(-3px); /* Efecto de elevación al pasar el mouse */
+    box-shadow: 0 6px 20px rgba(244, 194, 93, 0.6);
 }
 
 /* Ajuste específico para móvil */
 @media (max-width: 767px) {
-     .btn-solicitar {
-          width: 90%;
-          /* En móvil, que el botón sea casi de todo el ancho */
-          margin: 0 auto;
-     }
+    .btn-solicitar {
+        width: 90%; /* En móvil, que el botón sea casi de todo el ancho */
+        margin: 0 auto;
+    }
 }
