@@ -20,7 +20,17 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
-let sessionID = parseInt(localStorage.getItem('ultimo_id')) || 1;
+
+// ID ÚNICO DEL USUARIO
+let usuarioID = localStorage.getItem('usuario_id');
+
+if (!usuarioID) {
+
+  usuarioID = crypto.randomUUID();
+
+  localStorage.setItem('usuario_id', usuarioID);
+
+}
 
 async function guardarUbicacionBD(lat, lon, nombre, correo, telefono) {
 
@@ -30,8 +40,8 @@ async function guardarUbicacionBD(lat, lon, nombre, correo, telefono) {
 
     await addDoc(colRef, {
 
-      id_consecutivo: sessionID,
-
+   
+      usuario_id: usuarioID,
       nombre: nombre,
       correo: correo,
       telefono: telefono,
@@ -41,10 +51,6 @@ async function guardarUbicacionBD(lat, lon, nombre, correo, telefono) {
       fecha_ubi: serverTimestamp()
 
     });
-
-    sessionID++;
-
-    localStorage.setItem('ultimo_id', sessionID);
 
   } catch (e) {
 
